@@ -44,7 +44,7 @@ function getTotalSupply() {
 
 // call your functions below this line
 mintNFT("art", 1, "Rahul");
-mintNFT("apple", 1, "Harshit");
-mintNFT("Punk", 1, "Ayush");
+mintNFT("apple", 2, "Harshit");
+mintNFT("Punk", 3, "Ayush");
 listNFTs();
 getTotalSupply();
