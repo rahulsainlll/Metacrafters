@@ -18,11 +18,26 @@ pragma solidity 0.8.18;
 contract MyToken {
 
     // public variables here
+    string public name = "MyToken";
+    string public symbol = "TKN";
+    uint public t_supply = 0;
 
     // mapping variable here
+    mapping(address => uint) public balances;
 
     // mint function
+    function mint ( address add, uint val) public {
+        t_supply += val;
+        balances[add] +=val;
+    }
 
     // burn function
+    function burn ( address add, uint val) public {
+        if (balances[add]>= val) {
+            t_supply -= val;
+            balances[add]-=val;
+        }
+
+    }
 
 }
